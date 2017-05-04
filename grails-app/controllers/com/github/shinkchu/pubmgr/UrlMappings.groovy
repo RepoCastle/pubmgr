@@ -17,6 +17,12 @@ class UrlMappings {
       view = { 'index' }
     }
 
+    "/researcher" {
+      controller = 'researcher'
+      action = { 'index' }
+      view = { 'index' }
+    }
+
     "/organization" {
       controller = 'organization'
       action = { 'index' }
