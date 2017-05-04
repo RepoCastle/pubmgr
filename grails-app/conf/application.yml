@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: pubmgr
+        defaultPackage: com.github.shinkchu.pubmgr
     spring:
         transactionManagement:
             proxies: false

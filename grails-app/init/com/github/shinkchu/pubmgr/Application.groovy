@@ -1,4 +1,4 @@
-package pubmgr
+package com.github.shinkchu.pubmgr
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

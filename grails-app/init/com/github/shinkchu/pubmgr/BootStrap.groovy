@@ -1,4 +1,4 @@
-package pubmgr
+package com.github.shinkchu.pubmgr
 
 class BootStrap {
 

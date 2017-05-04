@@ -1,0 +1,196 @@
+
+body {
+  padding-top: 0px;
+}
+.navbar-sep {
+  float: left;
+  padding: 6px 6px;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.navbar-fixed-top {
+  position: inherit;
+}
+
+.navbar {
+  width: 1140px;
+  margin-bottom: 0px;
+  background-color: #3a744c;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  font-weight: bold;
+}
+
+.navbar-brand-color {
+  color: white;
+}
+
+.navbar-brand.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-brand.default {
+  color: white;
+  text-decoration: none;
+}
+
+a.navbar-brand {
+  font-size: 29px;
+}
+.navbar-inverse {
+  margin: auto;
+  width: 1140px;
+  /*background-color: transparent;*/
+  border: none;
+}
+
+.jumbotron {
+  width: 1140px;
+  margin: auto;
+  padding: 0 0 0 0;
+}
+
+.banner {
+  background-image: url("../images/banner.png");
+  background-size: 100%;
+  height: 170px;
+}
+
+
+#Content {
+  padding-top: 0em;
+  width: 1170px;
+}
+
+section.first {
+  padding-top: 0px;
+}
+
+#intro {
+  background-image: url("../images/bg.png");
+  background-size: 100%;
+  height: 658px;
+}
+
+
+#intro .content {
+  padding-top: 12px;
+  padding-bottom: 40px;
+  padding-left: 88px;
+  padding-right: 32px;
+  color: white;
+  font-size: 12pt;
+}
+
+.edit-button-div {
+  padding-right: 50px;
+}
+
+.remove-button {
+  color: red;
+}
+
+.modal-lg {
+  width: 1000px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+.panel-body > a.active {
+  color: red;
+  font-weight: bold;
+}
+
+.organization-header {
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+}
+.organization-continent {
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: center;
+}
+.organization-nation {
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: center;
+}
+.organization-content {
+  font-size: 10pt;
+}
+
+a.book-li-title {
+  color: #255b17;
+  font-size: 14pt;
+}
+
+.book-introduction-more {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline;
+}
+
+.book-li-picture {
+  width: 90px;
+  height: 120px;
+}
+
+.book-li-brief {
+  color: #000000;
+}
+
+.reference-detail-label {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.reference-detail-content {
+  font-size: 14pt;
+}
+
+.button-bold {
+  font-weight: bold;
+}
+.basic-li > a {
+  font-size: 14pt;
+  margin-left: 10px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-left-40 {
+  margin-left: 40px;
+}
+
+.height-40 {
+  height: 40px;
+}
+
+.left15 {
+  left: 15px;
+}
+
+
+.footer {
+  margin: auto;
+  width: 1140px;
+  border: none;
+  /*background-color: #3a744c;*/
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.panel-body {
+  margin-left: 20px;
+  margin-top: 0px;
+}
