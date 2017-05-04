@@ -3,6 +3,11 @@ package com.github.shinkchu.pubmgr
 class UrlMappings {
 
   static mappings = {
+    "/$controller/$action?/$id?(.$format)?"{
+      constraints {
+          // apply constraints here
+      }
+    }
 
     "/" {
       controller = 'introduction'
@@ -29,7 +34,6 @@ class UrlMappings {
       view = { 'index' }
     }
 
-
     "/admin" {
       controller = 'user'
       action = 'login'
@@ -50,12 +54,6 @@ class UrlMappings {
       controller = 'contact'
       action = { 'index' }
       view = { 'index' }
-    }
-
-    "/$controller/$action?/$id?(.$format)?"{
-      constraints {
-          // apply constraints here
-      }
     }
 
     "500"(view:'/error')

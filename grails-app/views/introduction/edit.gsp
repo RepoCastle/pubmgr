@@ -27,7 +27,7 @@
                     <g:hiddenField name="version" value="${introductionInstance?.version}"/>
                     <div>
                         <fieldset class="form">
-                            <ckeditor:editor name="content" height="400px">
+                            <ckeditor:editor name="content" height="400px" width="80%">
                                 ${introductionInstance?.content}
                             </ckeditor:editor>
                         </fieldset>

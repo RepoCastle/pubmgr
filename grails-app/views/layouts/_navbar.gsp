@@ -3,27 +3,32 @@
     <div class="navbar-header">
       <div class="navbar-sep"></div>
       <a class="navbar-brand${params.controller == "introduction" ? " active" : " default"}" href="${createLink(uri: '/')}">
-        <g:message code="default.navbar.home" default="Home"/>
-      </a>
-
-      <div class="navbar-sep"></div>
-      <a class="navbar-brand${params.controller == "reference" ? " active" : " default"}" href="${createLink(uri: '/reference')}">
-        <g:message code="default.navbar.reference" default="References"/>
+        <g:message code="default.navbar.home" default="首页"/>
       </a>
 
       <div class="navbar-sep"></div>
       <a class="navbar-brand${params.controller == "book" ? " active" : " default"}" href="${createLink(uri: '/book')}">
-        <g:message code="default.navbar.book" default="Book"/>
+        <g:message code="default.navbar.book" default="图书"/>
+      </a>
+
+      <div class="navbar-sep"></div>
+      <a class="navbar-brand${params.controller == "reference" ? " active" : " default"}" href="${createLink(uri: '/reference')}">
+        <g:message code="default.navbar.reference" default="期刊"/>
+      </a>
+
+      <div class="navbar-sep"></div>
+      <a class="navbar-brand${params.controller == "researcher" ? " active" : " default"}" href="${createLink(uri: '/researcher')}">
+        <g:message code="default.navbar.researcher" default="研究人员"/>
       </a>
 
       <div class="navbar-sep"></div>
       <a class="navbar-brand${params.controller == "organization" ? " active" : " default"}" href="${createLink(uri: '/organization')}">
-        <g:message code="default.navbar.organization" default="Organization"/>
+        <g:message code="default.navbar.organization" default="网站链接"/>
       </a>
 
       <div class="navbar-sep"></div>
       <a class="navbar-brand${params.controller == "contact" ? " active" : " default"}" href="${createLink(uri: '/contact')}">
-        <g:message code="default.navbar.contact" default="Contact Us"/>
+        <g:message code="default.navbar.contact" default="联系我们"/>
       </a>
 
     </div>

@@ -16,7 +16,7 @@ body {
 .navbar {
   width: 1140px;
   margin-bottom: 0px;
-  background-color: #3a744c;
+  background-color: #235fbc;
 }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
@@ -56,7 +56,7 @@ a.navbar-brand {
 .banner {
   background-image: url("../images/banner.png");
   background-size: 100%;
-  height: 170px;
+  height: 96px;
 }
 
 
@@ -77,9 +77,9 @@ section.first {
 
 
 #intro .content {
-  padding-top: 12px;
+  padding-top: 38px;
   padding-bottom: 40px;
-  padding-left: 88px;
+  padding-left: 64px;
   padding-right: 32px;
   color: white;
   font-size: 12pt;
@@ -101,9 +101,94 @@ section.first {
   margin-bottom: 0px;
 }
 
+.sidebar-header {
+  /*background-image: url("../images/siderbar-header.png");*/
+  width: 225px;
+  height: 42px;
+}
+
+.sidebar-header .title {
+  font-weight: bold;
+  color: black;
+  font-size: 14pt;
+  padding-top: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.sidebar-subheader {
+  background-color: #f5f5f5;
+  background-size: 100%;
+  height: 50px;
+  width: 225px;
+}
+.sidebar-subheader.active {
+  background-color: #78a35c;
+}
+
+.sidebar-subheader .title {
+  font-size: 14pt;
+  width: 100%;
+  padding-top: 9px;
+  padding-left: 15px;
+}
+
+.sidebar-subheader a {
+  color: #000000;
+}
+
+.sidebar-button {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
 .panel-body > a.active {
   color: red;
   font-weight: bold;
+}
+
+.basic-title {
+  font-size: 14pt;
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #78a35c;
+  display:inline;
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  /*font-weight: bold;*/
+}
+.basic-title-left {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #f5f5f5;
+
+  padding-bottom: 5px;
+}
+
+.basic-content {
+  /*margin-left: 30px;*/
+  margin-top: 20px;
+}
+
+.basic-ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.basic-li {
+  font-size: 10pt;
+  border-bottom: dotted;
+  border-bottom-width: 3px;
+  border-bottom-color: #f5f5f5;
+  color: darkgray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.basic-li a {
+  color: #000000;
+  font-size: 11pt;
 }
 
 .organization-header {
@@ -193,4 +278,11 @@ a.book-li-title {
 .panel-body {
   margin-left: 20px;
   margin-top: 0px;
+}
+.margin-top-medium {
+  margin-top: 5px;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 5px;
 }

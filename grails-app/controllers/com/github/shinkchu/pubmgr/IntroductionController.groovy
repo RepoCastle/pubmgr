@@ -16,7 +16,19 @@ class IntroductionController {
   }
 
   def edit() {
-    def introductionInstance = Introduction.get(params.id)
+    def introductionInstance
+
+    if (params.id) {
+      introductionInstance = Introduction.get(params.id)
+    } else {
+      def introductionList = Introduction.list()
+      if (introductionList.size() == 0) {
+        introductionInstance = new Introduction(params)
+      } else if (introductionList.size() == 1) {
+        introductionInstance = introductionList.get(0)
+      }
+    }
+
     if (introductionInstance) {
       [introductionInstance: introductionInstance]
     }

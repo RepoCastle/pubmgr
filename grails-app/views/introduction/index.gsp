@@ -10,8 +10,10 @@
 %{--<g:set var="isAdmin" value="${session.user?.admin}"></g:set>--}%
 <section id="intro">
 <div class="content">
-  <div>
-    ${introductionInstance?.content?.decodeHTML()}
+  <div class="col-md-offset-5 col-md-7 content">
+    <div>
+      ${introductionInstance?.content?.decodeHTML()}
+    </div>
   </div>
 
   <g:if test="${isAdmin}">
