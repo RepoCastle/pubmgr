@@ -12,7 +12,7 @@ class Category {
 
   static	constraints = {
     parent (nullable: true)
-    target inList: ["reference", "organization", "book"], nullable: false
+    target inList: ["reference", "organization", "book", "researcher"], nullable: false
     suborder min: 0, unique: 'target'
   }
 

@@ -4,40 +4,25 @@ class Reference {
   String title
   String authors
   String publishDate
-  String publisher
-  String publisherType
-  String content
+  String keywords
+  String introduction
+  String picture
   String attachment
-  String institutions
-  String abstractEn
-  String keywordEn
-  String abstractCh
-  String keywordCh
 
   static	belongsTo	= [category: Category]
 
   static mapping = {
-    sort publishDate: "desc"
+    sort 'publishDate'
+    order 'desc'
   }
 
   static constraints = {
     title nullable: false
     authors nullable: true
-    content nullable: true, maxSize: 65535
     publishDate nullable: true
-    publisher nullable: true
-    publisherType nullable: true, inList: ['C', 'J', 'B', 'M']
+    keywords nullable: true
+    introduction maxSize: 65535
+    picture nullable: true
     attachment nullable: true
-
-    institutions nullable: true
-    abstractEn nullable: true, maxSize: 65535
-    keywordEn nullable: true
-    abstractCh nullable: true, maxSize: 65535
-    keywordCh nullable: true
-  }
-
-  public String toCiteFormat() {
-    String citeFormat = title + ' [' + (publisherType ? publisherType : 'J') + ']; ' + authors + '; ' + publisher + '; ' + publishDate
-    return citeFormat
   }
 }
