@@ -9,6 +9,8 @@ class Book {
   String picture
   String attachment
 
+  static	belongsTo	= [category: Category]
+
   static mapping = {
     sort 'publishDate'
     order 'desc'

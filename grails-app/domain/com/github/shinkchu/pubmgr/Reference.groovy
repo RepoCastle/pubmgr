@@ -14,6 +14,7 @@ class Reference {
   String abstractCh
   String keywordCh
 
+  static	belongsTo	= [category: Category]
 
   static mapping = {
     sort publishDate: "desc"

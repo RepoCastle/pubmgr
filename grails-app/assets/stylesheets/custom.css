@@ -46,6 +46,13 @@ a.navbar-brand {
   /*background-color: transparent;*/
   border: none;
 }
+.nav a:focus, .nav a:hover {
+   background-color: #235fbc;
+   color: #ffffff;
+   outline: none;
+   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+  margin-right: 12px;
+}
 
 .jumbotron {
   width: 1140px;
@@ -86,7 +93,12 @@ section.first {
 }
 
 .edit-button-div {
+  margin-top: 10px;
   padding-right: 50px;
+}
+
+.edit-button-div a {
+  text-decoration: none;
 }
 
 .remove-button {
@@ -123,9 +135,6 @@ section.first {
   height: 50px;
   width: 225px;
 }
-.sidebar-subheader.active {
-  background-color: #78a35c;
-}
 
 .sidebar-subheader .title {
   font-size: 14pt;
@@ -136,6 +145,15 @@ section.first {
 
 .sidebar-subheader a {
   color: #000000;
+}
+
+.sidebar-subheader.active {
+  background-color: #235fbc;
+  color: white;
+}
+
+.sidebar-subheader.active a {
+  color: white;
 }
 
 .sidebar-button {
@@ -285,4 +303,8 @@ a.book-li-title {
 
 .margin-bottom-medium {
   margin-bottom: 5px;
+}
+
+.row {
+  padding: 0 0;
 }

@@ -40,7 +40,7 @@ class ContactController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'contact.label', default: 'Contact'), contact.id])
-                redirect contact
+                redirect(action: "index")
             }
             '*' { respond contact, [status: CREATED] }
         }

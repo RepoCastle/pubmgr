@@ -6,23 +6,61 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#list-contact" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
-        <div id="list-contact" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-                <div class="message" role="status">${flash.message}</div>
+    <section id="contact">
+        <div class="lead">
+        %{--<div class="container">--}%
+            <g:set var="contactInstance" value="${com.github.shinkchu.pubmgr.Contact.count>0 ? com.github.shinkchu.pubmgr.Contact.all.get(0) : null}"></g:set>
+            <g:if test="${contactInstance}">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="text-right"><strong><g:message code="contact.organization.label" default="Organization"></g:message>：</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left">${contactInstance?.organization}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="text-right"><strong><g:message code="contact.address.label" default="Address"></g:message>：</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left">${contactInstance?.address}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="text-right"><strong><g:message code="contact.contacts.label" default="Contacts"></g:message>：</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left">${contactInstance?.contacts}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="text-right"><strong><g:message code="contact.phone.label" default="Phone No."></g:message>：</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left">${contactInstance?.phone}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="text-right"><strong><g:message code="contact.email.label" default="email"></g:message>：</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left">${contactInstance?.email}</p>
+                    </div>
+                </div>
             </g:if>
-            <f:table collection="${contactList}" />
 
-            <div class="pagination">
-                <g:paginate total="${contactCount ?: 0}" />
+            <div class="actions" style="margin-top: 10px;">
+                <a href="${createLink(uri: '/')}" class="btn btn-large btn-primary" style="text-decoration: none;">
+                    <i class="icon-chevron-left icon-white"></i>
+                    <g:message code="error.button.backToHome" default="返回首页"/>
+                </a>
             </div>
+            %{--</div>--}%
         </div>
+    </section>
     </body>
 </html>

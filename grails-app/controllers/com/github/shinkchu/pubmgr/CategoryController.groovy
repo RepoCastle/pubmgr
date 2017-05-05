@@ -18,11 +18,27 @@ class CategoryController {
     }
 
     def create() {
+        def controllerName
+
+        if (params.target) {
+            controllerName = params.target
+        } else {
+            controllerName = this.controllerName
+        }
+
+        def maxSuborder = Category.findAllByTarget(controllerName).suborder.max()
+        if (!maxSuborder) {
+            maxSuborder = 0
+        }
+        params.suborder = maxSuborder + 1
+
         respond new Category(params)
     }
 
     @Transactional
     def save(Category category) {
+        def controllerName = params.target
+
         if (category == null) {
             transactionStatus.setRollbackOnly()
             notFound()
@@ -39,10 +55,14 @@ class CategoryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'category.label', default: 'Category'), category.id])
-                redirect category
+                flash.message = message(code: 'category.new.success.label', args: [controllerName, category.name], default: 'Creating new category successfully!')
+                redirect(controller: controllerName, action: "index")
             }
-            '*' { respond category, [status: CREATED] }
+            '*' {
+                flash.message = message(code: 'category.new.fail.label', args: [controllerName], default: 'Creating new category failed!')
+                redirect(controller: controllerName, action: "index")
+                return
+            }
         }
     }
 
