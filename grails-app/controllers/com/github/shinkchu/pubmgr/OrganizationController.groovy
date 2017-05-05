@@ -40,7 +40,7 @@ class OrganizationController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'organization.label', default: 'Organization'), organization.id])
-                redirect organization
+                redirect(action: "index")
             }
             '*' { respond organization, [status: CREATED] }
         }
